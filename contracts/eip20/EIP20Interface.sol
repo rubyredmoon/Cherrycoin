@@ -1,6 +1,12 @@
 // Abstract contract for the full ERC 20 Token standard
+ patch/kangarang-factory-tests
+// https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md
+pragma solidity ^0.4.21;
+
+
 // https://github.com/ethereum/EIPs/issues/20
 pragma solidity ^0.4.8;
+   1.0.0
 
 contract EIP20Interface {
     /* This is a slight change to the ERC20 base standard.
@@ -43,6 +49,10 @@ contract EIP20Interface {
     /// @return Amount of remaining tokens allowed to spent
     function allowance(address _owner, address _spender) public view returns (uint256 remaining);
 
+ patch/kangarang-factory-tests
+    // solhint-disable-next-line no-simple-event-func-name
+
+ 1.0.0
     event Transfer(address indexed _from, address indexed _to, uint256 _value);
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 }

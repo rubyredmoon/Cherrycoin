@@ -1,5 +1,5 @@
 # Tokens
-[ ![Codeship Status for ConsenSys/Tokens](https://app.codeship.com/projects/ccf33380-4dfa-0135-cfa1-72c4965f7f14/status?branch=master)](https://app.codeship.com/projects/233433)
+[ ![Codeship Status for ConsenSys/Tokens](https://app.codeship.com/projects/ccf33380-4dfa-0135-cfa1-72c4965f7f14/status?branch=master)](https://app.codeship.com/projects/233433) [![Coverage Status](https://coveralls.io/repos/github/ConsenSys/Tokens/badge.svg?branch=coverage_test)](https://coveralls.io/github/ConsenSys/Tokens?branch=coverage_test) [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![David](https://img.shields.io/david/expressjs/express.svg?style=flat-square)](https://david-dm.org/ConsenSys/Tokens) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)]() [![AirBNB](https://img.shields.io/badge/code%20style-airbnb-brightgreen.svg?style=flat-square)](https://github.com/airbnb/javascript) [![GitHub issues](https://img.shields.io/github/issues/ConsenSys/Tokens/shields.svg?style=flat-square)](https://github.com/ConsenSys/Tokens/issues) 
 
 This repo contains Solidity smart contract code for simple, standards-compliant tokens on Ethereum. Adhering to standards allows other contract developers to easily incorporate your token into their applications.
 
@@ -15,8 +15,13 @@ npm run compile
 ## Tests
 The repo has a comprehensive test suite. You can run it with `npm run test`.
 
+patch/kangarang-factory-tests
+## Ethereum Package Management (ethpm)
+The contracts in this repo are published under `tokens` on [EPM](https://www.ethpm.com/registry/packages). EPM is the recommended means of consuming token contracts in this repo. Copy-pasting code is highly discouraged.
+
 ## ethpm
 The contracts in this repo are published under `tokens` on EPM. EPM is the recommended means of consuming token contracts in this repo. Copy-pasting code is highly discouraged.
+1.0.0
 
 ## Contributing
 Pull requests are welcome! Please keep standards discussions to the EIP repos.
