@@ -1,3 +1,4 @@
+ patch/kangarang-factory-tests
 const EIP20Factory = artifacts.require('EIP20Factory');
 const EIP20Bytecode = artifacts.require('EIP20').bytecode;
 
@@ -86,3 +87,16 @@ contract('EIP20Factory', (accounts) => {
     assert.strictEqual(result, false, 'should have returned false because the bytecode was not exact');
   });
 });
+
+const EIP20Factory = artifacts.require('EIP20Factory')
+
+contract('EIP20Factory', function (accounts) {
+  it('Verify a Human Standard Token once deployed using both verification functions.', async () => {
+    const factory = await EIP20Factory.new()
+    const newTokenAddr = await factory.createEIP20.call(100000, 'Simon Bucks', 2, 'SBX', {from: accounts[0]})
+    await factory.createEIP20(100000, 'Simon Bucks', 2, 'SBX', {from: accounts[0]})
+    const res = await factory.verifyEIP20.call(newTokenAddr, {from: accounts[0]})
+    assert(res, 'Could not verify the token.')
+  })
+})
+ 1.0.0
